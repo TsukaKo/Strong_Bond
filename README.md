@@ -1,24 +1,36 @@
-# README
+# Strong Bond
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## サイト概要
+高齢者の家族と情報や考え、経験を共有する事で家族の繋がりを強くするサイトです。管理者が発行したID、PASWARDを知っている家族のみ閲覧、投稿を可能とする認証機能を設定。
+日々の日誌をカレンダー機能を使い家族で共有、いいね機能や投稿機能を使ったコミュニケーションの場として利用頂けます。
 
-Things you may want to cover:
+### サイトテーマ
+新型コロナウィルスの影響から家族とのコミュニケーションが減っている時代だからこそ、
+「家族との密な繋がり」をテーマに家族の情報や経験を日誌を通じて共有し、より固い絆が結べえればと思います。
 
-* Ruby version
+### テーマを選んだ理由
+昨年、新型コロナウィルスの影響から、私の結婚式に親族を招待する事ができず、電話連絡だけといった寂しい経験をしました。
+新型コロナウィルスの先行きは未だ不透明でありステイホームが余儀なくされ、実家に帰れない、親に会えない、家族や親戚が心配といった不安を抱えている方が多いと思います。
+こんな時代だからこそより一層の「家族の密な繋がり」が必要なのだと考え、このテーマ設定をしました。
 
-* System dependencies
+### ターゲットユーザ
+高齢者とその親族。
 
-* Configuration
+### 主な利用シーン
+投稿した日誌を家族が共有し、コメントやいいね機能を使った交流の場として活用ができます。
 
-* Database creation
+## 設計書
 
-* Database initialization
+## チャレンジ要素一覧
+https://docs.google.com/spreadsheets/d/1E4Quehglf9PxM1XTE-ft2X5-hJ5dmoJhsI-UJlgzVmY/edit#gid=0
 
-* How to run the test suite
+## 開発環境
+- OS：Linux(CentOS)
+- 言語：HTML,CSS,JavaScript,Ruby,SQL
+- フレームワーク：Ruby on Rails
+- JSライブラリ：jQuery
+- IDE：Cloud9
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 使用素材
+- 外部サービスの画像素材・音声素材を使用した場合は、必ずサービス名とURLを明記してください。
+- 使用しない場合は、使用素材の項目をREADMEから削除してください。
