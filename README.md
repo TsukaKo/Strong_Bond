@@ -20,6 +20,10 @@
 投稿した日誌を家族が共有し、コメントやいいね機能を使った交流の場として活用ができます。
 
 ## 設計書
+https://app.diagrams.net/#G1rX3RdYP7P07IlysFI6x14ZF_1XlBfWIh
+https://docs.google.com/spreadsheets/d/1P8tSFIXWIJkNpbjaLUyXBBhUPyqJv0Uj7XHF_p9AIec/edit#gid=1773513600
+https://docs.google.com/spreadsheets/d/1AxlgwgJuwx-AbugsLYloOFN3E3VrDqsxJv60G-4TxEg/edit#gid=84123752
+https://docs.google.com/spreadsheets/d/16VyvObRicguOJd_sG1dX7jrIjEeZDjyh/edit#gid=549108681
 
 ## チャレンジ要素一覧
 https://docs.google.com/spreadsheets/d/1Mf_T6Xy2pYG34xCAfwsvFLUed18_E6iif6b17Jrrsv0/edit#gid=0
