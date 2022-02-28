@@ -1,0 +1,15 @@
+<div class="box">
+  <div class="box-inner">
+    <%= form_with model: @group, url:groups_path, local:true do |f| %>
+      <div class="field">
+        <%= f.label :group_name, "グループ名" %><br />
+        <%= f.text_field :group_name, autofoucus: true, autocomplete: "group_name" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :group_password, "グループ共有パスワード" %><br />
+        <%= f.text_field :group_name, autofoucus: true, autocomplete: "group_password" %>
+      </div>
+    <% end %>
+  </div>
+</div>
