@@ -1,3 +1,15 @@
 // Place all the styles related to the groups controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.box-g{
+  width: 550px;
+  height:400px;
+  margin: 100px auto 0;
+  border-radius: 4px;
+  border: 1px #ddd solid;
+}
+
+.box-inner-g{
+  padding: 30px 26px ;
+}
