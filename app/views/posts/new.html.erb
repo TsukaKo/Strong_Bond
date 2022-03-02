@@ -1,6 +1,11 @@
 <div class="post-box">
   <div class="post-box-inner">
     <h2>新規登録投稿</h2>
-    
+    <%= form_with model: @post, url:posts_path, local:true do |f| %>
+    <div class="form-group">
+      <%= f.label :title, "タイトル" %>
+      <%= f.text_field :title, autofoucs: true, autocomplete: "title" %>
+    </div>
+    <% end %>
   </div>
 </div>
