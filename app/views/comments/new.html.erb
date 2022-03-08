@@ -1,0 +1,11 @@
+<div class="comment-box">
+  <div class="comment-box-inner">
+    <h2>コメント入力</h2>
+    <%= form_with model: @comment, url:comments_path, local:true do |f| %>
+    <div class="form-group">
+      <%= f.label :comment, "コメント" %>
+      <%= f.text_field :comment, autofoucs: true, autocomplete: "comment" %>
+    </div>
+    <% end %>
+  </div>
+</div>
