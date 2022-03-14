@@ -1,0 +1,19 @@
+<div class="container px-8 px-sm-12">
+  <div class="row">
+    <div class="col">
+      <h2>投稿編集画面</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <%= form_with model:@post, url: post_path(@post.id), local:true do |f| %>
+      <h4>投稿画像</h4>
+      <%= f.attachment_field :image %>
+      <h4>タイトル</h4>
+      <%= f.text_field :title %>
+      <h4>本文</h4>
+      <%= f.text_area :post %>
+      <% end %>
+    </div>
+  </div>
+</div>
