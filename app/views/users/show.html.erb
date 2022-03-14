@@ -6,6 +6,7 @@
   </div>
   <div class="row">
     <div class="col">
+      <%= attachment_image_tag @user, :image, :fill, 20, 20, fallback: "no_image.jpg" %>
       <h3>氏名</h3>
       <p><%= @user.first_name %><%= @user.last_name %></p>
       <h3>カナ</h3>

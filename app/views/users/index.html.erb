@@ -1,0 +1,21 @@
+<h2><%= @group.name %> メンバー一覧</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">氏名</th>
+      <th scope="col">住所</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @user.each do |user| %>
+    <tr>
+      <td><%= user.image %></td>
+      <td><%= user.name %></td>
+      <td><%= user.address %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
