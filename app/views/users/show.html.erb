@@ -1,0 +1,23 @@
+<div class="container px-8 px-sm-12">
+  <div class="row">
+    <div class="col">
+      <h2><%= @user.name %>さんの登録詳細</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <h3>氏名</h3>
+      <p><%= @user.first_name %><%= @user.last_name %></p>
+      <h3>フリガナ</h3>
+      <p><%= @user.first_name_kana %><%= @user.last_name_kana %></p>
+      <h3>郵便番号</h3>
+      <p><%= @user.postal_code %></p>
+      <h3>住所</h3>
+      <p><%= @user.address %></p>
+      <h3>電話番号</h3>
+      <p><%= @user.telephone_number %></p>
+      <h3>メールアドレス</h3>
+      <p><%= @user.email %></p>
+    </div>
+  </div>
+</div>
