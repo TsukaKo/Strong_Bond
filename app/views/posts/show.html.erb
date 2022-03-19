@@ -7,11 +7,23 @@
       </div>
       <h3><%= @post.title %></h3>
       <h3><%= @post.post %></h3>
-      <% if @posts.user.id == current_user.id %>
-       <%= form_with model:@post, url:edit_post_path(@post.id), local:true do |f| %>
-        <% f.submit "編集", class:"btn btn-success" %>
-       <% end %>
+      <%= link_to new_comment_path do %>
+       <button type="button" class="btn btn-info">コメント</button>
+      <% end %>
+      <%= form_with model:@post, url:edit_post_path(@post.id), local:true do |f| %>
+        <% if @posts.user.id == current_user.id %>
+          <% f.submit "編集", class:"btn btn-success" %>
+        <% end %>
       <% end %>
     </div>
+    <!--ここにコメント一覧-->
+    <% @comment.each do |comment| %>
+    <div class="comment-box">
+      <div class="comment-box-inner">
+        
+      </div>
+    </div>
+    <% end %>
+    <!--comment投稿者もしくはpost投稿のみ削除可能-->
   </div>
 </div>
