@@ -1,0 +1,17 @@
+<div class="container px-5 px-sm-0 mx-auto">
+  <div class="row">
+    <h2>投稿詳細画面</h2>
+    <div class="col">
+      <div class="col md-2 offset-md-1">
+        <%= attachment_image_tag @post, :image, :fill, 20, 20, fallback: "no_image.jpg" %>
+      </div>
+      <h3><%= @post.title %></h3>
+      <h3><%= @post.post %></h3>
+      <% if @posts.user.id == current_user.id %>
+       <%= form_with model:@post, url:edit_post_path(@post.id), local:true do |f| %>
+        <% f.submit "編集", class:"btn btn-success" %>
+       <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
