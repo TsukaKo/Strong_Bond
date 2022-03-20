@@ -17,13 +17,16 @@
       <% end %>
     </div>
     <!--ここにコメント一覧-->
-    <% @comment.each do |comment| %>
-    <div class="comment-box">
-      <div class="comment-box-inner">
-        
+    <div class="col">
+      <% @comments.each do |comment| %>
+      <div class="comment-box">
+        <div class="comment-box-inner">
+          <h3><%= @user.name %></h3>
+          <h3><%= comment.comment %></h3>
+        </div>
       </div>
+      <% end %>
     </div>
-    <% end %>
     <!--comment投稿者もしくはpost投稿のみ削除可能-->
   </div>
 </div>
