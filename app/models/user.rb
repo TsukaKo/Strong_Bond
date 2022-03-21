@@ -8,6 +8,6 @@ class User < ApplicationRecord
       [first_name, last_name].join(' ')
     end
 
-  belongs_to :group
+  belongs_to :group, optional: true
   has_many :posts, dependent: :destroy
 end
