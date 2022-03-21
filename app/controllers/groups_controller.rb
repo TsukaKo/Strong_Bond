@@ -20,8 +20,10 @@ class GroupsController < ApplicationController
 
   def update
     @group = Group.find(params[:id])
-    @group.update(post_params)
-    redirect_to posts_path
+    if group.password == params[:group_password]
+      user.update(group_id: params[:group_id])
+      redirect_to posts_path
+    end
   end
 
   private
