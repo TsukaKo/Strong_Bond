@@ -10,8 +10,11 @@
       <div class="field"><br />
         <%= f.label :group_password, "グループ共有パスワード" %><br />
         <%= f.text_field :group_name, autofoucus: true, autocomplete: "group_password" %>
-      </div>
+      </div></br>
       <%= f.submit "登録" %>
-    <% end %>
+    <% end %></br>
+    <h6>
+      既にグループがある方は<%= link_to "こちら", groups_path %>から
+    </h6>
   </div>
 </div>
