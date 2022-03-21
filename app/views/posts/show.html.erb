@@ -16,12 +16,13 @@
         <% end %>
       <% end %>
     </div>
-    <!--ここにコメント一覧-->
+    
     <div class="col">
       <% @comments.each do |comment| %>
       <div class="comment-box">
         <div class="comment-box-inner">
           <h3><%= @user.name %></h3>
+          <h3><%= l comment.created_at %></h3>
           <h3><%= comment.comment %></h3>
         </div>
       </div>
