@@ -1,7 +1,7 @@
 <div class="box-g">
   <div class="box-inner-g">
     <h2>グループ選択</h2>
-    <%= form_with model: @group, url:group_path(:id), local:true do |f| %>
+    <%= form_with model: @group, url:group_path, method: :patch, local:true do |f| %>
      <div class="field">
        <%= f.label :group_name, "グループ選択" %>
        <%= f.select :group, options_from_collection_for_select(Group.all, :id, :group_name) %>

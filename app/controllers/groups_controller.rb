@@ -5,6 +5,7 @@ class GroupsController < ApplicationController
   end
 
   def create
+    # saveできた時と出来なかった時のredirectをif文を使って指定する
     group = Group.new(groups_params)
     group.save
     redirect_to posts_path
@@ -12,6 +13,7 @@ class GroupsController < ApplicationController
 
   def index
     @groups = Group.all
+    @group = Group.new
   end
 
   def edit
@@ -19,9 +21,9 @@ class GroupsController < ApplicationController
   end
 
   def update
-    @group = Group.find(params[:id])
-    if group.password == params[:group_password]
-      user.update(group_id: params[:group_id])
+    @group = Group.find(params[:group][:group])
+    if @group.group_password == params[:group][:group_password]
+      current_user.update(group_id: @group.id)
       redirect_to posts_path
     end
   end
