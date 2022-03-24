@@ -1,10 +1,10 @@
 <div class="post-box">
   <div class="post-box-inner">
     <h2>新規登録投稿</h2>
-    <%= form_with model: @post, url:posts_path, local:true do |f| %>
+    <%= form_with model:@post, url:posts_path, local:true do |f| %>
     <div class="form-group">
       <%= f.label :image, "投稿画像" %>
-      <%= f.attachment_image_tag post, :image, :fill, 40, 40, fallback: "no_image.jpg" %>
+      <%= f.attachment_field :image, :fill, 40, 40, fallback: "no_image.jpg" %>
     </div>
     <div class="form-group">
       <%= f.label :title, "タイトル" %>
