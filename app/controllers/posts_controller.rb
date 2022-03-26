@@ -6,12 +6,15 @@ class PostsController < ApplicationController
 
   def create
     post = Post.new(posts_params)
+    post.user_id = current_user.id
     post.save
     redirect_to posts_path
   end
 
   def index
-    @posts = Post.all
+    # @posts = Post.all
+    group_user_ids = User.where(group_id: current_user.group_id).pluck(:id)
+    @posts = Post.where(user_id: group_user_ids)
   end
 
   def show
@@ -26,7 +29,7 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.find(params[:id])
-    @post.update(post_params)
+    @post.update(posts_params)
     redirect_to post_path(@post.id)
   end
 
