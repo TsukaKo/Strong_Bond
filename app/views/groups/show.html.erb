@@ -11,7 +11,11 @@
   <tbody>
     <% @group.users.each do |user| %>
     <tr>
-      <td><%= user.name %></td>
+      <td>
+        <%= link_to user_path(@user.id), local:true do %>
+          <%= user.first_name %><%= user.last_name %>
+        <% end %>
+      </td>
       <td><%= user.address %></td>
     </tr>
     <% end %>

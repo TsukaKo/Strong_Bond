@@ -1,0 +1,12 @@
+<div class="box-comment">
+  <div class="box-inner-comment">
+    <h2>コメント編集</h2>
+    <%= form_with model:@comment, url: post_comment_path,(@comment.id), method: :path, local:true do |f| %>
+    <div class="form-group">
+      <%= f.label :comment, "コメント編集" %>
+      <%= f.text_area :comment, autofocus: true, autocomplete: "comment" %>
+      <%= f.submit "変更を保存", class:"btn btn-success" %>
+    </div>
+    <% end %>
+  </div>
+</div>
