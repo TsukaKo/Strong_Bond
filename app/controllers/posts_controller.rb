@@ -12,15 +12,13 @@ class PostsController < ApplicationController
   end
 
   def index
-    # @posts = Post.all
     group_user_ids = User.where(group_id: current_user.group_id).pluck(:id)
     @posts = Post.where(user_id: group_user_ids)
   end
 
   def show
     @post = Post.find(params[:id])
-    @user = @comment.user
-    @comment = Comment.find(params[:id])
+    @comments = @post.comments
   end
 
   def edit

@@ -5,9 +5,10 @@ class CommentsController < ApplicationController
   end
 
   def create
-    comment = Comment.new(comment_params)
+    comment = Comment.new(comments_params)
     comment.save
-    redirect_to post_path(@post.id)
+    @post_id = comment.post_id
+    redirect_to post_path(@post_id)
   end
 
   def edit
@@ -28,7 +29,7 @@ class CommentsController < ApplicationController
 
   private
   def comments_params
-    params.require(:comment).permit(:comment)
+    params.require(:comment).permit(:comment, :post_id)
   end
 
 end
