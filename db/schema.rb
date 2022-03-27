@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 2022_03_08_132408) do
     t.datetime "updated_at", null: false
     t.integer "post_id"
     t.text "comment"
+    t.integer "user_id"
   end
 
   create_table "groups", force: :cascade do |t|

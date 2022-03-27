@@ -10,6 +10,10 @@ class GroupsController < ApplicationController
     redirect_to posts_path
   end
 
+  def show
+    @group = Group.find(params[:id])
+  end
+
   def index
     @groups = Group.all
     @group = Group.new

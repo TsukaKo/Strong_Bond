@@ -10,4 +10,5 @@ class User < ApplicationRecord
 
   belongs_to :group, optional: true
   has_many :posts, dependent: :destroy
+  has_many :comments
 end

@@ -19,9 +19,14 @@
       <h3>メールアドレス</h3>
       <p><%= @user.email %></p>
       <h3>グループ名</h3>
-      <p><%= @group.name %></p>
+      <p><%= @group.group_name %></p>
       <h3>自己紹介文</h3>
       <p><%= @user.self_introduction %></p>
+      <% if @user == current_user %>
+         <%= link_to edit_user_path(@user.id), local:true do %>
+            <button type="button" class="btn btn-success">編集</button>
+         <% end %>
+      <% end %>
     </div>
   </div>
 </div>

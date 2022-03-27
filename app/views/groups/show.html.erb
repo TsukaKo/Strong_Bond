@@ -1,4 +1,4 @@
-<h2><%= @group.name %> メンバー一覧</h2>
+<h2><%= @group.group_name %> メンバー一覧</h2>
 
 <table>
   <thead>
@@ -9,7 +9,7 @@
   </thead>
 
   <tbody>
-    <% @user.each do |user| %>
+    <% @group.users.each do |user| %>
     <tr>
       <td><%= user.name %></td>
       <td><%= user.address %></td>

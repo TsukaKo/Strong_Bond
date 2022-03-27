@@ -9,5 +9,7 @@ class AddColumnUsers < ActiveRecord::Migration[5.2]
     add_column :users, :address, :string
     add_column :users, :telephone_number, :string
     add_column :users, :self_introduction, :text
+    add_column :users, :comment_id, :integer
+    remove_column :users, :comment_id, :inteher
   end
 end

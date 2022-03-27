@@ -6,6 +6,7 @@ class CommentsController < ApplicationController
 
   def create
     comment = Comment.new(comments_params)
+    comment.user_id = current_user.id
     comment.save
     @post_id = comment.post_id
     redirect_to post_path(@post_id)
